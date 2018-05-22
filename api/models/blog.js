@@ -7,7 +7,7 @@ const blogSchema = mongoose.Schema({
 	description: {type: String, required: true},
 	category: {type: String, required: true},
 	author: {type: String, required: true},
-	posts = [
+	posts: [
 		{
 			type: mongoose.Schema.Types.ObjectId,
 			ref: "Post"

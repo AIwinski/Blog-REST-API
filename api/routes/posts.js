@@ -29,7 +29,7 @@ router.get('/', (req, res, next) => {
     });
 });
 
-router.post('/', checkAuth, upload.single('image'), (req, res, next) => {
+router.post('/', checkAuth, (req, res, next) => {
     Blog.findOne({_id: req.params.blogId})
     .exec()
     .then(doc => {

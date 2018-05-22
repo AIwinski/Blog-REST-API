@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const checkAuth = require('../middleware/check-auth');
+const multer = require('multer');
 
 const Blog = require('../models/blog');
 
@@ -31,7 +32,6 @@ const upload = multer({
     fileFilter: fileFilter
 });
 
-//=========================================================
 
 router.get('/', (req, res, next) => {
     Blog.find({})
